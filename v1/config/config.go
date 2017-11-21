@@ -30,7 +30,7 @@ type Config struct {
 	Broker          string      `yaml:"broker" envconfig:"BROKER"`
 	DefaultQueue    string      `yaml:"default_queue" envconfig:"DEFAULT_QUEUE"`
 	ResultBackend   string      `yaml:"result_backend" envconfig:"RESULT_BACKEND"`
-	ResultsExpireIn int         `yaml:"results_expire_in" envconfig:"RESULTS_EXPIRE_IN"`
+	ResultsExpireIn int64         `yaml:"results_expire_in" envconfig:"RESULTS_EXPIRE_IN"`
 	AMQP            *AMQPConfig `yaml:"amqp"`
 	TLSConfig       *tls.Config
 }
